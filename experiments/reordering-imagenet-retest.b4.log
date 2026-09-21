@@ -1,0 +1,101 @@
+
+#### 2026-09-16 20:53:04
+ Command line: ../matrepair --norepair -b 4 /mnt/data/datasets/machine-learning-matrices-reorder/imagenet 1262102 900 
+Setting memory for each repair instance to 464053 MBs
+Sending logging messages to file: /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.log
+==== Conversion bin/csv->csrv
+Command: /home/louza/mm-repair/csvmat2csrv -b 4   /mnt/data/datasets/machine-learning-matrices-reorder/imagenet -r 0   1262102 900
+Conversion time: 278.5864
+==== Stopping after the conversion phase as requested
+=== Command line: ./reorder.py -b 4 -k 16 pc /mnt/data/datasets/machine-learning-matrices-reorder/imagenet 1262102 900 
+/home/louza/mm-repair/reordering-imagenet/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-imagenet/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-imagenet/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-imagenet/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+ --- block 1 done.
+ --- block 0 done.
+ --- block 2 done.
+ --- block 3 done.
+OK     File /mnt/data/datasets/machine-learning-matrices-reorder/imagenet
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.0.vc /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.0.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.1.vc /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.1.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.2.vc /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.2.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.3.vc /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.3.vco
+Dividing into row chunks...
+OK     python3 csv_splitter.py /mnt/data/datasets/machine-learning-matrices-reorder/imagenet 1262102 4 
+All done.
+Transposing each row block...
+OK     bash 07_transpose.sh /mnt/data/datasets/machine-learning-matrices-reorder/imagenet 4 
+All done.
+Generating the CSM for each row block...
+OK     bash 08_generate_csm.sh /mnt/data/datasets/machine-learning-matrices-reorder/imagenet 1262102 900 4 16
+All done.
+Running pc upon each row block...
+OK     bash 10_run_cover.sh /mnt/data/datasets/machine-learning-matrices-reorder/imagenet 4 16 LKH-3.0.7 
+All done.
+Reordering each .vc file...
+OK     bash 11_reorder.sh /mnt/data/datasets/machine-learning-matrices-reorder/imagenet 1262102 900 4 16 cover
+All done.
+Cleaning...
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.0_cols /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.0.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.0.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.0.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.1_cols /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.1.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.1.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.1.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.2_cols /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.2.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.2.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.2.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.3_cols /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.3.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.3.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.3.pruned_local_16.cover.solution 
+All done.
+64580.61:3149156
+
+#### 2026-09-17 14:54:04
+ Command line: ../matrepair --noconv -b 4 /mnt/data/datasets/machine-learning-matrices-reorder/imagenet 1262102 900 
+Setting memory for each repair instance to 464053 MBs
+Sending logging messages to file: /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.log
+---- Skipping conversion bin/csv->csrv
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.0.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.1.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.2.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.3.vc 464053
+Repair time: 496.4359
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.0.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.0.vc.R 
+Integer vector compression time: 1.2361
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.0.vc.C 
+Ans-fold time: 2.6032
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.1.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.1.vc.R 
+Integer vector compression time: 1.1224
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.1.vc.C 
+Ans-fold time: 5.3266
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.2.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.2.vc.R 
+Integer vector compression time: 1.1307
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.2.vc.C 
+Ans-fold time: 7.9217
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.3.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.3.vc.R 
+Integer vector compression time: 1.1684
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.4.3.vc.C 
+Ans-fold time: 10.4889
+Elapsed time: 213.5655
+==== Done

@@ -327,3 +327,44 @@ mnist2m   & 784  &  0.10 &1571328&4.7973e+12 &  0.52 &1393664&4.7973e+12 &  0.77
 optical   & 174  &  0.04 &228352&1.0777e+17 &  0.04 &204800&1.0777e+17 &  0.07 &202752&1.0777e+17 &  0.09 &269312&1.0777e+17 \\
 pgsf      & 768  &  0.39 &6021632&3.9299e+10 &  1.81 &6444032&3.9299e+10 &  1.66 &4784640&3.9299e+10 &  2.41 &4508504&3.9299e+10 \\
 susy      & 18   &  0.30 &566784&6.546e+07 &  0.31 &566272&6.546e+07 &  0.40 &547840&6.546e+07 &  0.33 &599560&6.546e+07 \\
+
+Sun Sep 13 09:19:05 PM -03 2026
+=== Command line: mmtest.py mg -b 1 -d /mnt/data/datasets/machine-learning-matrices-original/ 
+Elapsed time: 30327.296
+
+Sending logging messages to file: errors.log
+airline78: xz --lzma2=dict=128MiB compression time = 1852.06 seconds
+census: xz --lzma2=dict=128MiB compression time = 290.50 seconds
+covtype: xz --lzma2=dict=128MiB compression time = 58.71 seconds
+glove: xz --lzma2=dict=128MiB compression time = 1036.64 seconds
+glove.q1k: xz --lzma2=dict=128MiB compression time = 1010.64 seconds
+glove.q256: xz --lzma2=dict=128MiB compression time = 707.27 seconds
+glove.q4k: xz --lzma2=dict=128MiB compression time = 729.58 seconds
+glove.q64: xz --lzma2=dict=128MiB compression time = 700.89 seconds
+glove.q64k: xz --lzma2=dict=128MiB compression time = 659.95 seconds
+higgs: xz --lzma2=dict=128MiB compression time = 2426.91 seconds
+imagenet: xz --lzma2=dict=128MiB compression time = 2062.24 seconds
+mnist2m: xz --lzma2=dict=128MiB compression time = 3154.99 seconds
+optical: xz --lzma2=dict=128MiB compression time = 287.30 seconds
+pgsf: xz --lzma2=dict=128MiB compression time = 12988.75 seconds
+susy: xz --lzma2=dict=128MiB compression time = 746.80 seconds
+### gzip and xz --lzma2=dict=128MiB size vs dense uncompressed size (absolute and percentage)
+ file     & rows &   dense size % &&     gzip % &&   xz --lzma2=dict=128MiB % &\\
+airline78 & 14462943& 3355402776 &100.00 &   15680509 &  0.47 &  239700088 &  7.14\\
+census    & 2458285& 1337307040 &100.00 &   15680509 &  1.17 &   36687612 &  2.74\\
+covtype   & 581012&  250997184 &100.00 &   15680509 &  6.25 &    8514640 &  3.39\\
+glove     & 400000&  960000000 &100.00 &   15680509 &  1.63 &  302737944 & 31.54\\
+glove.q1k & 400000&  960000000 &100.00 &   15680509 &  1.63 &  134586900 & 14.02\\
+glove.q25 & 400000&  960000000 &100.00 &   15680509 &  1.63 &  100212296 & 10.44\\
+glove.q4k & 400000&  960000000 &100.00 &   15680509 &  1.63 &  166658660 & 17.36\\
+glove.q64 & 400000&  960000000 &100.00 &   15680509 &  1.63 &   67570240 &  7.04\\
+glove.q64 & 400000&  960000000 &100.00 &   15680509 &  1.63 &  240530736 & 25.06\\
+higgs     & 11000000& 2464000000 &100.00 &   15680509 &  0.64 &  739485728 & 30.01\\
+imagenet  & 1262102& 9087134400 &100.00 &   15680509 &  0.17 &  324173292 &  3.57\\
+mnist2m   & 2000000&12544000000 &100.00 &   15680509 &  0.13 &  517302296 &  4.12\\
+optical   & 325834&  453560928 &100.00 &   15680509 &  3.46 &  112828476 & 24.88\\
+pgsf      & 2000000&12288000000 &100.00 &   15680509 &  0.13 & 2180181204 & 17.74\\
+susy      & 5000000&  720000000 &100.00 &   15680509 &  2.18 &  301432316 & 41.87\\
+
+Mon Sep 21 06:54:29 PM -03 2026
+=== Command line: mmtest.py mg -b 2 -d /mnt/data/datasets/machine-learning-matrices-original/ 

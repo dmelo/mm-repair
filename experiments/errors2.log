@@ -21405,3 +21405,6 @@ Error executing command line:
 	/home/louza/mm-repair/csvmat2csrv -b 20   /mnt/data/datasets/machine-learning-matrices/susy.csv -r 0 -m -s 5000000 18
 Check log file: /mnt/data/datasets/machine-learning-matrices/susy.csv.log
 ## Error executing: /home/louza/mm-repair/matrepair-h -r -b 20 -p 20   /mnt/data/datasets/machine-learning-matrices/susy.csv 5000000 18 --hybrid
+
+#### 2026-09-21 18:54:29
+ Command line: /home/louza/mm-repair/matrepair -r -b 2 -p 2 /mnt/data/datasets/machine-learning-matrices/airline78.csv 14462943 29 --hybrid --hybrid 

@@ -1,0 +1,34 @@
+
+#### 2026-09-13 01:21:50
+ Command line: /home/louza/mm-repair/matrepair -r -b 1 -p 1 --noconv /mnt/data/datasets/machine-learning-matrices-reorder/pgsf 2000000 768 
+Setting memory for each repair instance to 464053 MBs
+Sending logging messages to file: /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.log
+---- Skipping conversion bin/csv->csrv
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.vc 464053
+Repair time: 1543.5424
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.vc.R 
+Integer vector compression time: 66.7048
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.vc.C 
+Ans-fold time: 177.5595
+Elapsed time: 1787.8070
+==== Compression Report:
+ >> matrix name: /mnt/data/datasets/machine-learning-matrices-reorder/pgsf
+ >> conversion time: 0.00
+ >> repair time: 1543.54
+ >> integer vectors time: 66.70
+ >> ansf time: 177.56
+ >> total time: 1787.81
+ >> matrix log(alpha)xNumEntries size: 2496000000 bytes
+ >> matrix dense size: 12288000000 bytes
+ >> total number of nonzero: 1535180832 (99.95%)
+ >> number of distinct nonzero: 4744
+ >> CRSV  size: 6148761280 bytes  (50.04%)
+ >> RE32  size: 5437416956 bytes  (44.25%)
+ >> REIV  size: 4757744602 bytes  (38.72%)
+ >> REANS size: 4266257439 bytes  (34.72%)
+==== Done

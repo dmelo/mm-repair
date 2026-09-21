@@ -1,0 +1,229 @@
+
+#### 2026-09-19 19:43:53
+ Command line: ../matrepair --norepair -b 12 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf 2000000 768 
+Setting memory for each repair instance to 464053 MBs
+Sending logging messages to file: /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.log
+==== Conversion bin/csv->csrv
+Command: /home/louza/mm-repair/csvmat2csrv -b 12   /mnt/data/datasets/machine-learning-matrices-reorder/pgsf -r 0   2000000 768
+Conversion time: 292.9537
+==== Stopping after the conversion phase as requested
+=== Command line: ./reorder.py -b 12 -k 16 pc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf 2000000 768 
+/home/louza/mm-repair/reordering-pgsf/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-pgsf/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-pgsf/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-pgsf/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-pgsf/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-pgsf/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-pgsf/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-pgsf/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-pgsf/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-pgsf/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-pgsf/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-pgsf/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+ --- block 1 done.
+ --- block 2 done.
+ --- block 10 done.
+ --- block 8 done.
+ --- block 7 done.
+ --- block 5 done.
+ --- block 9 done.
+ --- block 3 done.
+ --- block 0 done.
+ --- block 4 done.
+ --- block 11 done.
+ --- block 6 done.
+OK     File /mnt/data/datasets/machine-learning-matrices-reorder/pgsf
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.0.vc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.0.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.1.vc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.1.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.2.vc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.2.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.3.vc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.3.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.4.vc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.4.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.5.vc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.5.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.6.vc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.6.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.7.vc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.7.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.8.vc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.8.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.9.vc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.9.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.10.vc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.10.vco
+OK     cp -p /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.11.vc /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.11.vco
+Dividing into row chunks...
+OK     python3 csv_splitter.py /mnt/data/datasets/machine-learning-matrices-reorder/pgsf 2000000 12 
+All done.
+Transposing each row block...
+OK     bash 07_transpose.sh /mnt/data/datasets/machine-learning-matrices-reorder/pgsf 12 
+All done.
+Generating the CSM for each row block...
+OK     bash 08_generate_csm.sh /mnt/data/datasets/machine-learning-matrices-reorder/pgsf 2000000 768 12 16
+All done.
+Running pc upon each row block...
+OK     bash 10_run_cover.sh /mnt/data/datasets/machine-learning-matrices-reorder/pgsf 12 16 LKH-3.0.7 
+All done.
+Reordering each .vc file...
+OK     bash 11_reorder.sh /mnt/data/datasets/machine-learning-matrices-reorder/pgsf 2000000 768 12 16 cover
+All done.
+Cleaning...
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.0_cols /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.0.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.0.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.0.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.1_cols /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.1.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.1.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.1.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.2_cols /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.2.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.2.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.2.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.3_cols /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.3.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.3.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.3.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.4_cols /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.4.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.4.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.4.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.5_cols /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.5.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.5.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.5.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.6_cols /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.6.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.6.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.6.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.7_cols /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.7.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.7.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.7.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.8_cols /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.8.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.8.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.8.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.9_cols /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.9.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.9.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.9.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.10_cols /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.10.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.10.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.10.pruned_local_16.cover.solution 
+All done.
+OK     rm -r /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.11_cols /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.11.pruned_local_16.par /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.11.pruned_local_16.tsp /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.11.pruned_local_16.cover.solution 
+All done.
+28775.41:1005924
+
+#### 2026-09-20 03:48:22
+ Command line: ../matrepair --noconv -b 12 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf 2000000 768 
+Setting memory for each repair instance to 464053 MBs
+Sending logging messages to file: /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.log
+---- Skipping conversion bin/csv->csrv
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.0.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.1.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.2.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.3.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.4.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.5.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.6.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.7.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.8.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.9.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.10.vc 464053
+==== Repair compression
+Command: /home/louza/mm-repair/brepair/irepair0 /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.11.vc 464053
+Repair time: 4063.7192
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.0.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.0.vc.R 
+Integer vector compression time: 4.1270
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.0.vc.C 
+Ans-fold time: 10.0511
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.1.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.1.vc.R 
+Integer vector compression time: 3.9304
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.1.vc.C 
+Ans-fold time: 20.3413
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.2.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.2.vc.R 
+Integer vector compression time: 4.0786
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.2.vc.C 
+Ans-fold time: 30.4520
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.3.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.3.vc.R 
+Integer vector compression time: 4.2589
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.3.vc.C 
+Ans-fold time: 40.4292
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.4.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.4.vc.R 
+Integer vector compression time: 4.1268
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.4.vc.C 
+Ans-fold time: 50.4522
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.5.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.5.vc.R 
+Integer vector compression time: 4.0349
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.5.vc.C 
+Ans-fold time: 60.4050
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.6.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.6.vc.R 
+Integer vector compression time: 4.1051
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.6.vc.C 
+Ans-fold time: 70.3344
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.7.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.7.vc.R 
+Integer vector compression time: 4.0711
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.7.vc.C 
+Ans-fold time: 80.2507
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.8.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.8.vc.R 
+Integer vector compression time: 4.1273
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.8.vc.C 
+Ans-fold time: 90.4066
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.9.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.9.vc.R 
+Integer vector compression time: 4.0299
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.9.vc.C 
+Ans-fold time: 100.3457
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.10.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.10.vc.R 
+Integer vector compression time: 4.0083
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.10.vc.C 
+Ans-fold time: 110.2030
+==== Integer vector .C compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.11.vc.C 
+==== Integer vector .R compression
+Command: /home/louza/mm-repair/sdsl/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.11.vc.R 
+Integer vector compression time: 3.9299
+==== Ans-fold compression
+Command: /home/louza/mm-repair/ans/encode.x /mnt/data/datasets/machine-learning-matrices-reorder/pgsf.12.11.vc.C 
+Ans-fold time: 120.0490
+Elapsed time: 794.3879
+==== Done

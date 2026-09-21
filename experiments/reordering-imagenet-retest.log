@@ -1,0 +1,14 @@
+
+#### 2026-09-21 18:51:38
+ Command line: ../matrepair --norepair -b 2 /mnt/data/datasets/machine-learning-matrices-reorder/imagenet 1262102 900 
+Setting memory for each repair instance to 464053 MBs
+Sending logging messages to file: /mnt/data/datasets/machine-learning-matrices-reorder/imagenet.log
+==== Conversion bin/csv->csrv
+Command: /home/louza/mm-repair/csvmat2csrv -b 2   /mnt/data/datasets/machine-learning-matrices-reorder/imagenet -r 0   1262102 900
+Conversion time: 53.0693
+==== Stopping after the conversion phase as requested
+=== Command line: ./reorder.py -b 2 -k 16 pc /mnt/data/datasets/machine-learning-matrices-reorder/imagenet 1262102 900 
+/home/louza/mm-repair/reordering-imagenet/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :
+/home/louza/mm-repair/reordering-imagenet/./column_major.py:17: SyntaxWarning: invalid escape sequence '\.'
+  def hash(s, separator='\.') :

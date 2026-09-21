@@ -1,0 +1,164 @@
+Tue Sep  8 04:16:44 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 1 
+Setting the working directory to: /home/louza/mm-repair/reordering-pgsf
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: pgsf
+### csrv and repair size; 1 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+pgsf      & 768  &  6148761280 &  5437416956 &  4757744602 &  4266257439 \\
+
+### csrv and repair size (percentage); 1 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+pgsf      & 768  & 50.0387 & 44.2498 & 38.7186 & 34.7189 \\
+=== Command line: ../mmtest-pgsf.py mz -b 1 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 1787.926
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 1 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+pgsf      & 2000000&  6148761280 &  5437416956 &  4757744602 &  4266257439 & 34.72\\
+=== Command line: ../mmtest-pgsf.py mm -n 500 -b 1 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 48734.796
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 1 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+pgsf      & 768  &  5.92 &6021120&3.9299e+10 & 22.02 &6476800&3.9299e+10 & 33.32 &5816320&3.9299e+10 & 36.20 &5340160&3.9299e+10 \\
+Sun Sep 13 03:41:13 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 16 
+Setting the working directory to: /home/louza/mm-repair/reordering-pgsf
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: pgsf
+### csrv and repair size; 16 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+pgsf      & 768  &  6148761280 &  6109469348 &  4391192176 &  4047526019 \\
+
+### csrv and repair size (percentage); 16 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+pgsf      & 768  & 50.0387 & 49.7190 & 35.7356 & 32.9389 \\
+=== Command line: ../mmtest-pgsf.py mz -b 16 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 842.655
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 16 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+pgsf      & 2000000&  6148761280 &  6109469348 &  4391192176 &  4047526019 & 32.94\\
+=== Command line: ../mmtest-pgsf.py mm -n 500 -b 16 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 2839.817
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 16 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+pgsf      & 768  &  0.40 &6021632&3.9299e+10 &  1.23 &6496256&3.9299e+10 &  1.63 &4837376&3.9299e+10 &  2.41 &4567816&3.9299e+10 \\
+Wed Sep 16 08:54:14 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 4 
+Setting the working directory to: /home/louza/mm-repair/reordering-pgsf
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: pgsf
+### csrv and repair size; 4 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+pgsf      & 768  &  6148761280 &  5939544664 &  4825887256 &  4264850665 \\
+
+### csrv and repair size (percentage); 4 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+pgsf      & 768  & 50.0387 & 48.3361 & 39.2732 & 34.7074 \\
+=== Command line: ../mmtest-pgsf.py mz -b 4 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 1363.273
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 4 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+pgsf      & 2000000&  6148761280 &  5939544664 &  4825887256 &  4264850665 & 34.71\\
+=== Command line: ../mmtest-pgsf.py mm -n 500 -b 4 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 13162.080
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 4 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+pgsf      & 768  &  1.68 &6021632&3.9299e+10 &  5.90 &6803456&3.9299e+10 &  8.37 &5721600&3.9299e+10 & 10.37 &5190676&3.9299e+10 \\
+Fri Sep 18 09:59:07 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 8 
+Setting the working directory to: /home/louza/mm-repair/reordering-pgsf
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: pgsf
+### csrv and repair size; 8 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+pgsf      & 768  &  6148761280 &  6056206348 &  4542164440 &  4140679970 \\
+
+### csrv and repair size (percentage); 8 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+pgsf      & 768  & 50.0387 & 49.2855 & 36.9642 & 33.6969 \\
+=== Command line: ../mmtest-pgsf.py mz -b 8 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 941.461
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 8 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+pgsf      & 2000000&  6148761280 &  6056206348 &  4542164440 &  4140679970 & 33.70\\
+=== Command line: ../mmtest-pgsf.py mm -n 500 -b 8 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 5572.801
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 8 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+pgsf      & 768  &  0.77 &6021632&3.9299e+10 &  2.46 &6690304&3.9299e+10 &  3.57 &5221888&3.9299e+10 &  4.35 &4858368&3.9299e+10 \\
+Sat Sep 19 07:43:53 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 12 
+Setting the working directory to: /home/louza/mm-repair/reordering-pgsf
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: pgsf
+### csrv and repair size; 12 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+pgsf      & 768  &  6148761280 &  6093297068 &  4569982624 &  4095339918 \\
+
+### csrv and repair size (percentage); 12 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+pgsf      & 768  & 50.0387 & 49.5874 & 37.1906 & 33.3280 \\
+=== Command line: ../mmtest-pgsf.py mz -b 12 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 845.453
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 12 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+pgsf      & 2000000&  6148761280 &  6093297068 &  4569982624 &  4095339918 & 33.33\\
+=== Command line: ../mmtest-pgsf.py mm -n 500 -b 12 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 3741.010
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 12 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+pgsf      & 768  &  0.52 &6021632&3.9299e+10 &  1.59 &6578176&3.9299e+10 &  2.24 &5105664&3.9299e+10 &  3.14 &4692812&3.9299e+10 \\
+Sun Sep 20 03:36:33 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 32 
+Setting the working directory to: /home/louza/mm-repair/reordering-pgsf
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: pgsf
+### csrv and repair size; 32 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+pgsf      & 768  &  6148761280 &  6130965940 &  4406643272 &  3990758238 \\
+
+### csrv and repair size (percentage); 32 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+pgsf      & 768  & 50.0387 & 49.8939 & 35.8614 & 32.4769 \\
+=== Command line: ../mmtest-pgsf.py mz -b 32 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 737.693
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 32 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+pgsf      & 2000000&  6148761280 &  6130965940 &  4406643272 &  3990758238 & 32.48\\
+=== Command line: ../mmtest-pgsf.py mm -n 500 -b 32 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 1562.483
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 32 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+pgsf      & 768  &  0.30 &6022144&3.9299e+10 &  0.64 &6316544&3.9299e+10 &  0.84 &4666880&3.9299e+10 &  1.35 &4398096&3.9299e+10 \\
+Mon Sep 21 06:52:23 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 2 

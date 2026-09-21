@@ -1,0 +1,164 @@
+Tue Sep  8 04:16:04 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 1 
+Setting the working directory to: /home/louza/mm-repair/reordering-mnist2m
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: mnist2m
+### csrv and repair size; 1 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+mnist2m   & 784  &  1591481740 &   932029140 &   728148242 &   666534837 \\
+
+### csrv and repair size (percentage); 1 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+mnist2m   & 784  & 12.6872 &  7.4301 &  5.8048 &  5.3136 \\
+=== Command line: ../mmtest-mnist2m.py mz -b 1 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 351.135
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 1 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+mnist2m   & 2000000&  1591481740 &   932029140 &   728148242 &   666534837 &  5.31\\
+=== Command line: ../mmtest-mnist2m.py mm -n 500 -b 1 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 8002.826
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 1 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+mnist2m   & 784  &  1.53 &1570816&4.7973e+12 &  3.19 &1089024&4.7973e+12 &  5.29 &892928&4.7973e+12 &  6.00 &837120&4.7973e+12 \\
+Sat Sep 12 07:13:14 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 16 
+Setting the working directory to: /home/louza/mm-repair/reordering-mnist2m
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: mnist2m
+### csrv and repair size; 16 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+mnist2m   & 784  &  1591481740 &  1196470832 &   785185080 &   741019046 \\
+
+### csrv and repair size (percentage); 16 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+mnist2m   & 784  & 12.6872 &  9.5382 &  6.2594 &  5.9074 \\
+=== Command line: ../mmtest-mnist2m.py mz -b 16 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 261.123
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 16 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+mnist2m   & 2000000&  1591481740 &  1196470832 &   785185080 &   741019046 &  5.91\\
+=== Command line: ../mmtest-mnist2m.py mm -n 500 -b 16 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 789.160
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 16 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+mnist2m   & 784  &  0.10 &1571328&4.7973e+12 &  0.35 &1389568&4.7973e+12 &  0.53 &1006080&4.7973e+12 &  0.60 &1020416&4.7973e+12 \\
+Wed Sep 16 08:53:40 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 4 
+Setting the working directory to: /home/louza/mm-repair/reordering-mnist2m
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: mnist2m
+### csrv and repair size; 4 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+mnist2m   & 784  &  1591481740 &  1070946280 &   769743320 &   713231282 \\
+
+### csrv and repair size (percentage); 4 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+mnist2m   & 784  & 12.6872 &  8.5375 &  6.1363 &  5.6858 \\
+=== Command line: ../mmtest-mnist2m.py mz -b 4 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 286.188
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 4 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+mnist2m   & 2000000&  1591481740 &  1070946280 &   769743320 &   713231282 &  5.69\\
+=== Command line: ../mmtest-mnist2m.py mm -n 500 -b 4 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 2327.522
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 4 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+mnist2m   & 784  &  0.40 &1571328&4.7973e+12 &  0.98 &1265152&4.7973e+12 &  1.51 &977408&4.7973e+12 &  1.77 &936448&4.7973e+12 \\
+Thu Sep 17 09:59:45 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 8 
+Setting the working directory to: /home/louza/mm-repair/reordering-mnist2m
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: mnist2m
+### csrv and repair size; 8 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+mnist2m   & 784  &  1591481740 &  1135982352 &   780988720 &   729269314 \\
+
+### csrv and repair size (percentage); 8 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+mnist2m   & 784  & 12.6872 &  9.0560 &  6.2260 &  5.8137 \\
+=== Command line: ../mmtest-mnist2m.py mz -b 8 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 268.508
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 8 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+mnist2m   & 2000000&  1591481740 &  1135982352 &   780988720 &   729269314 &  5.81\\
+=== Command line: ../mmtest-mnist2m.py mm -n 500 -b 8 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 1348.854
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 8 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+mnist2m   & 784  &  0.20 &1571328&4.7973e+12 &  0.57 &1334272&4.7973e+12 &  0.94 &997888&4.7973e+12 &  0.99 &975360&4.7973e+12 \\
+Fri Sep 18 09:58:19 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 12 
+Setting the working directory to: /home/louza/mm-repair/reordering-mnist2m
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: mnist2m
+### csrv and repair size; 12 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+mnist2m   & 784  &  1591481740 &  1171786912 &   805604448 &   740351949 \\
+
+### csrv and repair size (percentage); 12 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+mnist2m   & 784  & 12.6872 &  9.3414 &  6.4222 &  5.9020 \\
+=== Command line: ../mmtest-mnist2m.py mz -b 12 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 256.278
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 12 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+mnist2m   & 2000000&  1591481740 &  1171786912 &   805604448 &   740351949 &  5.90\\
+=== Command line: ../mmtest-mnist2m.py mm -n 500 -b 12 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 1040.236
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 12 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+mnist2m   & 784  &  0.14 &1571328&4.7973e+12 &  0.52 &1369088&4.7973e+12 &  0.62 &1026048&4.7973e+12 &  0.80 &1005568&4.7973e+12 \\
+Mon Sep 21 10:21:49 AM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 32 
+Setting the working directory to: /home/louza/mm-repair/reordering-mnist2m
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: mnist2m
+### csrv and repair size; 32 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+mnist2m   & 784  &  1591481740 &  1252688312 &   782931784 &   750913249 \\
+
+### csrv and repair size (percentage); 32 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+mnist2m   & 784  & 12.6872 &  9.9864 &  6.2415 &  5.9862 \\
+=== Command line: ../mmtest-mnist2m.py mz -b 32 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 213.160
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 32 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+mnist2m   & 2000000&  1591481740 &  1252688312 &   782931784 &   750913249 &  5.99\\
+=== Command line: ../mmtest-mnist2m.py mm -n 500 -b 32 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 635.104
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 32 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+mnist2m   & 784  &  0.07 &1571328&4.7973e+12 &  0.29 &1436160&4.7973e+12 &  0.43 &1012736&4.7973e+12 &  0.48 &1096704&4.7973e+12 \\
+Mon Sep 21 06:52:00 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 2 

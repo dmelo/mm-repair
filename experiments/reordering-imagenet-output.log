@@ -1,0 +1,166 @@
+Tue Sep  8 04:15:15 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 1 
+Setting the working directory to: /home/louza/mm-repair/reordering-imagenet
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: imagenet
+### csrv and repair size; 1 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+imagenet  & 900  &  1413165920 &   516977348 &   387734682 &   346071182 \\
+
+### csrv and repair size (percentage); 1 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+imagenet  & 900  & 15.5513 &  5.6891 &  4.2669 &  3.8084 \\
+script.sh: line 3: ../mmtest-imagenet.py: No such file or directory
+script.sh: line 4: ../mmtest-imagenet.py: No such file or directory
+=== Command line: ../mmtest-imagenet.py mz -b 1 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 377.016
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 1 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+imagenet  & 1262102&  1413165920 &   516977348 &   387734682 &   346071182 &  3.81\\
+=== Command line: ../mmtest-imagenet.py mm -n 500 -b 1 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 4004.810
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 1 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+imagenet  & 900  &  1.36 &1390592&4.066e+09 &  1.39 &592384&4.066e+09 &  2.40 &469504&4.066e+09 &  2.86 &432640&4.066e+09 \\
+Sat Sep 12 08:50:59 AM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 16 
+Setting the working directory to: /home/louza/mm-repair/reordering-imagenet
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: imagenet
+### csrv and repair size; 16 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+imagenet  & 900  &  1413165920 &   656458872 &   430803824 &   392102989 \\
+
+### csrv and repair size (percentage); 16 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+imagenet  & 900  & 15.5513 &  7.2240 &  4.7408 &  4.3149 \\
+=== Command line: ../mmtest-imagenet.py mz -b 16 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 200.838
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 16 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+imagenet  & 1262102&  1413165920 &   656458872 &   430803824 &   392102989 &  4.31\\
+=== Command line: ../mmtest-imagenet.py mm -n 500 -b 16 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 436.536
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 16 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+imagenet  & 900  &  0.10 &1391616&4.066e+09 &  0.18 &766976&4.066e+09 &  0.29 &565248&4.066e+09 &  0.30 &584704&4.066e+09 \\
+Wed Sep 16 08:53:04 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 4 
+Setting the working directory to: /home/louza/mm-repair/reordering-imagenet
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: imagenet
+### csrv and repair size; 4 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+imagenet  & 900  &  1413165920 &   579055120 &   398102560 &   365065296 \\
+
+### csrv and repair size (percentage); 4 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+imagenet  & 900  & 15.5513 &  6.3723 &  4.3809 &  4.0174 \\
+=== Command line: ../mmtest-imagenet.py mz -b 4 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 220.238
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 4 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+imagenet  & 1262102&  1413165920 &   579055120 &   398102560 &   365065296 &  4.02\\
+=== Command line: ../mmtest-imagenet.py mm -n 500 -b 4 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 1161.592
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 4 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+imagenet  & 900  &  0.35 &1391104&4.066e+09 &  0.43 &669696&4.066e+09 &  0.70 &499200&4.066e+09 &  0.85 &481280&4.066e+09 \\
+Thu Sep 17 04:33:59 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 8 
+Setting the working directory to: /home/louza/mm-repair/reordering-imagenet
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: imagenet
+### csrv and repair size; 8 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+imagenet  & 900  &  1413165920 &   615666480 &   423272968 &   379594267 \\
+
+### csrv and repair size (percentage); 8 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+imagenet  & 900  & 15.5513 &  6.7751 &  4.6579 &  4.1773 \\
+=== Command line: ../mmtest-imagenet.py mz -b 8 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 249.794
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 8 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+imagenet  & 1262102&  1413165920 &   615666480 &   423272968 &   379594267 &  4.18\\
+=== Command line: ../mmtest-imagenet.py mm -n 500 -b 8 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 747.340
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 8 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+imagenet  & 900  &  0.19 &1391104&4.066e+09 &  0.33 &714752&4.066e+09 &  0.46 &537600&4.066e+09 &  0.52 &523264&4.066e+09 \\
+Fri Sep 18 09:57:53 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 12 
+Setting the working directory to: /home/louza/mm-repair/reordering-imagenet
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: imagenet
+### csrv and repair size; 12 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+imagenet  & 900  &  1413165920 &   639154228 &   419447544 &   384653335 \\
+
+### csrv and repair size (percentage); 12 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+imagenet  & 900  & 15.5513 &  7.0336 &  4.6158 &  4.2329 \\
+=== Command line: ../mmtest-imagenet.py mz -b 12 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 258.162
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 12 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+imagenet  & 1262102&  1413165920 &   639154228 &   419447544 &   384653335 &  4.23\\
+=== Command line: ../mmtest-imagenet.py mm -n 500 -b 12 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 600.476
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 12 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+imagenet  & 900  &  0.14 &1391616&4.066e+09 &  0.22 &745984&4.066e+09 &  0.35 &546304&4.066e+09 &  0.49 &555140&4.066e+09 \\
+Sun Sep 20 08:35:16 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 32 
+Setting the working directory to: /home/louza/mm-repair/reordering-imagenet
+Data directory: /mnt/data/datasets/machine-learning-matrices-reorder
+Sending logging messages to file: retest.log
+Processing file: imagenet
+### csrv and repair size; 32 row-blocks
+ file     & rows &        crsv &        re32 &        reiv &       reans \\
+imagenet  & 900  &  1413165920 &   702729424 &   460482920 &   410291829 \\
+
+### csrv and repair size (percentage); 32 row-blocks
+ file     & rows &    crsv &    re32 &    reiv &   reans \\
+imagenet  & 900  & 15.5513 &  7.7332 &  5.0674 &  4.5151 \\
+=== Command line: ../mmtest-imagenet.py mz -b 32 -d /mnt/data/datasets/machine-learning-matrices-reorder/ --extra=--noconv 
+Elapsed time: 183.076
+
+Sending logging messages to file: errors.log
+### csrv + repair +iv/ans size; 32 row-blocks
+ file     & rows &        csrv &        re32 &        reiv &       reans & reans%\\
+imagenet  & 1262102&  1413165920 &   702729424 &   460482920 &   410291829 &  4.52\\
+=== Command line: ../mmtest-imagenet.py mm -n 500 -b 32 -d /mnt/data/datasets/machine-learning-matrices-reorder/ 
+Elapsed time: 330.130
+
+Sending logging messages to file: errors.log
+### time x iteration and peak memory usage in kb for matrix multiplication; 32 row-blocks
+ file     & cols & csrvmm      && re32mm      && reivmm      && remm        &\\
+imagenet  & 900  &  0.09 &1391616&4.066e+09 &  0.14 &828928&4.066e+09 &  0.21 &627200&4.066e+09 &  0.21 &693760&4.066e+09 \\
+Mon Sep 21 06:51:38 PM -03 2026
+=== Command line: retest.py pc -d /mnt/data/datasets/machine-learning-matrices-reorder -b 2 

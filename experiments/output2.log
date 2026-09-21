@@ -264,3 +264,6 @@ pgsf.csv   & 768  &  1.16 &108544 &3.9299e+10 \\
 susy.csv   & 18   &  0.60 &469504 &6.546e+07 \\
 
 
+
+Mon Sep 21 06:54:29 PM -03 2026
+=== Command line: mmtest-h.py mz -b 2 -p 2 -d /mnt/data/datasets/machine-learning-matrices/ 
