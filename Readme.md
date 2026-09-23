@@ -49,6 +49,14 @@ a bug in `sdsl-lite`, not in this repository — it is tracked upstream as
 November 2024 against a repository whose last commit was in December 2019, so the edit
 has to be made locally.
 
+With CMake 4 or later, `install.sh` also stops at the configure step with "Compatibility
+with CMake < 3.5 has been removed from CMake", because `sdsl-lite` declares
+`cmake_minimum_required(VERSION 2.8.11)`. Raising the policy minimum gets past it:
+
+```bash
+CMAKE_POLICY_VERSION_MINIMUM=3.5 ./install.sh
+```
+
 With no argument `install.sh` installs into `$HOME/include` and `$HOME/lib`, which is
 where the makefiles look by default. To use a different prefix, pass the matching paths
 to `make`:
