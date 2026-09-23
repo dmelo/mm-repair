@@ -22,6 +22,7 @@ The main compression program is `matrepair`. The hybrid scheme is enabled with `
 
 - A C++ compiler with C++17 support and a C compiler with C99 support, plus `make`
 - Python 3.8 or later
+- [CMake](https://cmake.org/), which `sdsl-lite`'s `install.sh` uses to build it
 - [sdsl-lite](https://github.com/simongog/sdsl-lite/)
 - [psutil](https://pypi.org/project/psutil/)
 
